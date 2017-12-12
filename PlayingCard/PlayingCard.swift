@@ -22,7 +22,7 @@ struct PlayingCard: CustomStringConvertible {
         static var all = [Suit.clubs, .diamonds, .hearts, .spades]
         
         var description: String {
-            return self.rawValue
+            return rawValue
         }
     }
     
