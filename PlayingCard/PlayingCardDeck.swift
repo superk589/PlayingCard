@@ -6,7 +6,7 @@
 //  Copyright © 2017 zzk. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct PlayingCardDeck {
     
@@ -36,6 +36,18 @@ extension Int {
             return Int(arc4random_uniform(UInt32(self)))
         } else if self < 0 {
             return -Int(arc4random_uniform(UInt32(self)))
+        } else {
+            return 0
+        }
+    }
+}
+
+extension CGFloat {
+    var arc4random: CGFloat {
+        if self > 0 {
+            return CGFloat(arc4random_uniform(UInt32(self)))
+        } else if self < 0 {
+            return -CGFloat(arc4random_uniform(UInt32(self)))
         } else {
             return 0
         }
